@@ -3,6 +3,7 @@ import { WiHumidity } from "react-icons/wi";
 import { FaWind } from "react-icons/fa6";
 import { BsFillSunFill ,BsCloudyFill,BsFillCloudRainFill,BsCloudFog2Fill,BsSnow,BsCloudHaze} from "react-icons/bs";
 import { TfiReload } from "react-icons/tfi";
+import { GiSmokeBomb } from "react-icons/gi";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { useEffect, useState, type ReactNode } from "react";
 import axios from "axios";
@@ -81,6 +82,10 @@ const handleSearch = async () => {
       case"Haze":
       iconElement= <BsCloudHaze/>
       iconColor="#0ca0f5ff";
+      break;
+      case"Smoke":
+      iconElement= <GiSmokeBomb/>
+      iconColor="#ab0cf5ff";
       break;
       default:
         iconElement=<TiWeatherPartlySunny/>
