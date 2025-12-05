@@ -73,9 +73,11 @@ const handleSearch = async () => {
       case"Mist":
       iconElement= <BsCloudFog2Fill/>
       iconColor="#279EFF";
+      break;
       case"Snow":
       iconElement= <BsSnow/>
       iconColor="#0ce5f5ff";
+       break;
       case"Haze":
       iconElement= <BsCloudHaze/>
       iconColor="#0ca0f5ff";
