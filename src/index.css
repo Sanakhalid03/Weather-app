@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.MainWrapper {
+ height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #c7c7eb, #ccf2dd);
+  box-sizing: border-box;
+}
+
+/* -------- Container -------- */
+
+.MainWrapper .container {
+  width: 100%;
+  max-width: 24rem;
+  max-height: 90vh;
+  background-color: rgba(255, 255, 255, 0.55);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  box-shadow: 0 0.6rem 1rem rgb(0 0 0 / 18%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+ transition: 0.2s ease-in;
+  border: 3px solid transparent;
+}
+.MainWrapper .container:hover{
+  border: 3px solid  #e54ceb55; 
+}
+
+/* -------- Search Area -------- */
+.MainWrapper .searchArea {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.MainWrapper .searchArea input {
+  flex: 1;
+  padding: 0.5rem 0.7rem;
+  border-radius: 2rem;
+  border: 1px solid grey;
+  outline: none;
+  font-size: 0.9rem;
+  text-align: center;
+  background: transparent;
+}
+
+.MainWrapper .searchCircle {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+ 
+}
+
+.MainWrapper .searchCircle .searchIcon {
+  font-size: 1.1rem;
+ color:#7B2869;
+ transition: 0.1s ease-in;
+}
+.MainWrapper .searchCircle:hover .searchIcon{
+     font-size: 1.3rem;
+}
+/* -------- Weather Display -------- */
+.MainWrapper .weatherArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.MainWrapper .weatherArea .icon {
+  font-size: 6rem;
+}
+
+.MainWrapper .weatherArea h1 {
+  font-size: 2.1rem;
+  margin: 0;
+}
+
+.MainWrapper .weatherArea span {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.MainWrapper .weatherArea h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* -------- Bottom Info -------- */
+.MainWrapper .bottomInfoArea {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+
+}
+
+.MainWrapper .infoBox {
+text-align: center;
+width: 42%;
+ background: linear-gradient(135deg, #e54ceb55, #c2e9fb);
+backdrop-filter: blur(4px);
+padding: 0.7rem;
+border: 1px solid #7B2869;
+border-radius: 1rem;
+}
+
+.MainWrapper .humidIcon,
+.MainWrapper .windIcon {
+  font-size: 2rem;
+}
+.MainWrapper .rate{
+    font-size: 1.5rem; 
+    color: #7B2869;
+}
+.MainWrapper .heading{
+    font-size: 1.8rem; 
+}
+
+/* -------- Loading State -------- */
+.MainWrapper .loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 10rem;
+  justify-content: center;
+}
+
+.MainWrapper .loadingIcon {
+  font-size: 2.3rem;
+  animation: spin 1.6s linear infinite;
+}
+
+.MainWrapper .loading p {
+  font-size: 1.1rem;
+  margin-top: 0.4rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 30rem) {
+  .MainWrapper .container {
+    padding: 0.8rem;
+    gap: 1rem;
+    max-height: 92vh;
+  }
+
+  .MainWrapper .weatherArea .icon {
+    font-size: 5rem;
+  }
+
+  .MainWrapper .weatherArea h1 {
+    font-size: 1.8rem;
+  }
+
+  .MainWrapper .bottomInfoArea {
+    font-size: 0.85rem;
+  }
+  .MainWrapper .infoBox {
+    width: 32%;
+  }
+  .MainWrapper .heading{
+    font-size: 1.3rem; 
+}
+}
